@@ -41,9 +41,7 @@ app.get("/api/timestamp*", function (req, res) {
           timestamp = getTimestamp(date);
       }
       else{ //per user story #5
-          timestamp = {
-              error: "invalid date" 
-          };
+          timestamp = {"unix": null, "utc" : "Invalid Date" };
       }
   }
   console.log(timestamp);
